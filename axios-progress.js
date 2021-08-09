@@ -98,7 +98,7 @@ function AxiosProgress(defaultConfig, axios) {
         },
         create: function (config) {
             const instance = axios.create({});
-            return new axios_progress(config, instance);
+            return AxiosProgress(config, instance);
         },
         get: function (url, config) {
             return this.handleProgress(url, config, "GET");
